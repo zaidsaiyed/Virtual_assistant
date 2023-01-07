@@ -1,7 +1,7 @@
 import speech_recognition, pyttsx3, winsound, pywhatkit, datetime
 
 listner = speech_recognition.Recognizer()
-VIRTUAL_ASSISTANT_NAME = "habibi"
+VIRTUAL_ASSISTANT_NAME = "computer"
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 voice = engine.setProperty('voice', voices[1].id)
@@ -58,17 +58,17 @@ def run():
                 time_str = "The time is " + time_now + " of " + day
                 say(time_str)
             elif 'play' in speech:
-                song = speech.replace('play','')
-                song = song.replace('baby','')
+                song = speech.replace('hi','')
+                song = song.replace('play','')
+                song = song.replace(VIRTUAL_ASSISTANT_NAME,'')
                 say("Playing"+ song)
                 pywhatkit.playonyt(song)
             elif 'how are you' in speech:
                 print("I am very well. Thanks for asking!! I hope you're doing well too. If I can help with anything just ask")
                 say("I am very well. Thanks for asking!! I hope you're doing well too. If I can help with anything just ask")
-            elif 'come to dubai' in speech:
-                print("I would love to come to Dubai. I have heard so many good things about it. I hope I can come soon")
-                winsound.PlaySound('come_to_dubai.mp3',winsound.SND_FILENAME)
-                say("I would love to come to Dubai. I have heard so many good things about it. I hope I can come soon")                
+            elif 'who are you' in speech:
+                print("I am your virtual assistant. I am here to help you with anything you need.")
+                say("I am your virtual assistant. I am here to help you with anything you need.")
             else:
                 say("Sorry! Can you repeat that??")
 
