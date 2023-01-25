@@ -1,5 +1,11 @@
-import speech_recognition, pyttsx3, winsound, pywhatkit, datetime
+import speech_recognition, pyttsx3, winsound, pywhatkit, datetime, openai, secret_key
 
+'''
+Please create a file called secret_key.py and add the following function to it:
+def get_key():
+    return "YOUR API KEY"
+'''
+openai.api_key = secret_key.get_key()
 listner = speech_recognition.Recognizer()
 VIRTUAL_ASSISTANT_NAME = "computer"
 engine = pyttsx3.init()
@@ -27,6 +33,17 @@ def take_command():
         pass
     
     return command
+def generate_response(user_input):
+    # Use the openai API to generate a response
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=f"{user_input}",
+        max_tokens=1024,
+        temperature=0.5
+    )
+    # Return the generated response
+    return response["choices"][0]["text"]
+
 
 def run(): 
     while True:
@@ -70,7 +87,8 @@ def run():
                 print("I am your virtual assistant. I am here to help you with anything you need.")
                 say("I am your virtual assistant. I am here to help you with anything you need.")
             else:
-                say("Sorry! Can you repeat that??")
+                response = generate_response(speech)
+                say(response)
 
 
 run()
