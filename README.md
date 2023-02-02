@@ -10,7 +10,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Installation
 1.  Clone the repository
-```git clone https://github.com/zaidsaiyed/Virtual_assistant.git```
+```
+git clone https://github.com/zaidsaiyed/Virtual_assistant.git
+```
 2.  Navigate to the project directory
 `cd Virtual_assistant`
 3.  Install the required packages
