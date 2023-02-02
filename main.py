@@ -1,10 +1,5 @@
-import speech_recognition, pyttsx3, winsound, pywhatkit, datetime, openai, secret_key
+import speech_recognition, pyttsx3, pywhatkit, datetime, openai, secret_key
 
-'''
-Please create a file called secret_key.py and add the following function to it:
-def get_key():
-    return "YOUR API KEY"
-'''
 openai.api_key = secret_key.get_key()
 listner = speech_recognition.Recognizer()
 VIRTUAL_ASSISTANT_NAME = "computer"
