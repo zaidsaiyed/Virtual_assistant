@@ -14,13 +14,19 @@ These instructions will get you a copy of the project up and running on your loc
 git clone https://github.com/zaidsaiyed/Virtual_assistant.git
 ```
 2.  Navigate to the project directory
-`cd Virtual_assistant`
+```
+cd Virtual_assistant
+```
 3.  Install the required packages
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 4. <***This is Important***>
  Add 'Your OpenAI API key' to **key.py** and change its name to **secret_key.py**
 5.  Run the virtual assistant
-`python main.py`
+```
+python main.py
+```
 
 ## Usage
 
