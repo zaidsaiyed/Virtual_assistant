@@ -76,6 +76,9 @@ def run():
                 say("Playing"+ song)
                 pywhatkit.playonyt(song)
             elif 'how are you' in speech:
+                print("I don't have feelings in the same way that humans do, but I'm functioning properly and ready to assist you with any questions or tasks you may have. How can I help you today?")
+                say("I don't have feelings in the same way that humans do, but I'm functioning properly and ready to assist you with any questions or tasks you may have. How can I help you today?")
+                
                 print("I am very well. Thanks for asking!! I hope you're doing well too. If I can help with anything just ask")
                 say("I am very well. Thanks for asking!! I hope you're doing well too. If I can help with anything just ask")
             elif 'who are you' in speech:
